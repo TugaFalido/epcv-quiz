@@ -62,6 +62,8 @@ export default function SingleAnswerQuiz({
       description: formData.get("description") as string,
       time_limit: Number(formData.get("timeLimit")),
       approval_percentage: Number(formData.get("approvalPercentage")),
+      disciplina: formData.get("disciplina") as string,
+      ano: formData.get("ano") as string,
       module_reference: formData.get("moduleReference") as string,
       position: Number(formData.get("position")),
       image: "",
@@ -164,6 +166,25 @@ export default function SingleAnswerQuiz({
                     placeholder="Percentagem mínima para aprovação"
                     defaultValue={editingQuiz?.approval_percentage}
                     required
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="disciplina">Disciplina</Label>
+                  <Input
+                    id="disciplina"
+                    name="disciplina"
+                    placeholder="Ex: Matemática"
+                    defaultValue={editingQuiz?.disciplina}
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="ano">Ano</Label>
+                  <Input
+                    id="ano"
+                    name="ano"
+                    placeholder="Ex: 9º ano"
+                    defaultValue={editingQuiz?.ano}
                   />
                 </div>
                 <div>

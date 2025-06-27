@@ -93,9 +93,11 @@ export default function QuizList() {
                   >
                     <CardHeader>
                       <CardTitle>{quiz.name}</CardTitle>
-                      <CardDescription className="text-sm flex gap-3">
-                        <div>Modulo: {quiz.module_reference}</div>
-                        <div>Posição: {quiz.position}</div>
+                      <CardDescription className="text-sm flex flex-col gap-1">
+                        <div><strong>Módulo:</strong> {quiz.module_reference}</div>
+                        <div><strong>Posição:</strong> {quiz.position}</div>
+                        {quiz.disciplina && <div><strong>Disciplina:</strong> {quiz.disciplina}</div>}
+                        {quiz.ano && <div><strong>Ano:</strong> {quiz.ano}</div>}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>

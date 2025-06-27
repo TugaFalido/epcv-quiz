@@ -29,6 +29,8 @@ const Quiz = z.object({
   image: z.string(),
   module_reference: z.string(),
   position: z.number(),
+  disciplina: z.string().optional(),
+  ano: z.string().optional(),
   next_block_link: z.string().optional(),
   previous_block_link: z.string().optional(),
   type: z.string().optional(),
